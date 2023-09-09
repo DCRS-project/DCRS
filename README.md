@@ -8,15 +8,25 @@ Please install libraries/packages listed in the conv/requirements.txt file. Make
 
 ## 2. Data Preprocessing
 
-You can download the processed data from the following <a href = 'https://drive.google.com/drive/folders/1kEOn-lDQ9L5NgBhohg4Upwo9Kr4T01a6?usp=share_link'>link</a>.
+You can download the processed data (including conv, rec and retrieval data) from the following <a href = 'https://drive.google.com/drive/folders/1kEOn-lDQ9L5NgBhohg4Upwo9Kr4T01a6?usp=share_link'>link</a>.
 
 For a fair comparision, we adopted the code from <a href='https://github.com/zxd-octopus/VRICR/tree/master'>VRICR</a> and <a href = 'https://github.com/wxl1999/UniCRS/tree/main'>UNICRS </a> to process data for the recommendation engine and dialogue module respectively. 
 
 ## 3. Training Retrieval Module:
 
-First, you need to generate data which is utilized to train our retrieval model.
+We build our retrieval module based on <a href='https://github.com/princeton-nlp/SimCSE'>SimCSE </a>. First, you need to generate data which is utilized to train our retrieval model.
 ```
 python gen_data_for_retrieval.py
+```
+To train our retrieval module, please run
+```
+cd retrieval
+sh run_unsup_example.sh
+```
+To generate retrieval data, please run
+
+```
+python test.py
 ```
 
 ## 4. Training Response Generation Model
