@@ -1,16 +1,17 @@
 # Good Examples Make Better Learners
 
-This repo contains code and data for the paper: "Good Examples Make Better Learners - Improving Conversational Recommendation with Informative Demonstrations".
+This repo contains code and data for the paper: "Broadening the View: Demonstration-augmented Prompt
+Learning for Conversational Recommendation".
 
 ## 1. Setup
 
-Please install libraries/packages listed in the conv/requirements.txt file. Make sure that you are using CUDA 11.6. Otherwise, some unexpected behaviors might happend.
+Please install libraries, packages listed in the conv/requirements.txt file. Make sure that you are using CUDA 11.6. Otherwise, some unexpected behaviors might happen.
 
 ## 2. Data Preprocessing
 
-You can download the processed data (including conv, rec and retrieval data) from the following <a href = 'https://drive.google.com/drive/folders/1kEOn-lDQ9L5NgBhohg4Upwo9Kr4T01a6?usp=share_link'>link</a>.
+You can download the processed data (including conv, rec, and retrieval data) from the following <a href = 'https://drive.google.com/drive/folders/1kEOn-lDQ9L5NgBhohg4Upwo9Kr4T01a6?usp=share_link'>link</a>.
 
-For a fair comparision, we adopted the code from <a href='https://github.com/zxd-octopus/VRICR/tree/master'>VRICR</a> and <a href = 'https://github.com/wxl1999/UniCRS/tree/main'>UNICRS </a> to process data for the recommendation engine and dialogue module respectively. 
+For a fair comparison, we adopted the code from <a href='https://github.com/zxd-octopus/VRICR/tree/master'>VRICR</a> and <a href = 'https://github.com/wxl1999/UniCRS/tree/main'>UNICRS </a> to process data for the recommendation engine and dialogue module respectively. 
 
 ## 3. Training Retrieval Module:
 
@@ -46,7 +47,7 @@ sh scripts/infer_retrieval.sh
 
 ## 5. Training Recommendation Engine
 
-To train our recommendation engine, you need to first pretrain neural embeddings of demonstrations. 
+To train our recommendation engine, you need to first pre-train neural embeddings of demonstrations. 
 
 ```
 cd rec
